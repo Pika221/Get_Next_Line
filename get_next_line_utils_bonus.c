@@ -6,7 +6,7 @@
 /*   By: hialpagu <hialpagu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 21:44:37 by hialpagu          #+#    #+#             */
-/*   Updated: 2024/12/28 21:44:45 by hialpagu         ###   ########.fr       */
+/*   Updated: 2024/12/31 10:38:00 by hialpagu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	j = 0;
 	if (!s1)
 	{
-		s1 = (char *)malloc(sizeof(char) * 1);
+		s1 = malloc(sizeof(char) * 1);
 		s1[0] = '\0';
 	}
 	if (!s2)

@@ -3,17 +3,15 @@
 
 int main()
 {
-	int fd;
-	fd = open("a.txt", O_RDONLY);
-	char *s = get_next_line(fd);
+	int	fd;
+	char *s;
 
+	fd = open("t.txt", O_RDONLY);
+	s = get_next_line(0);
 	printf("%s", s);
 	free(s);
 	s = get_next_line(fd);
 	printf("%s", s);
 	free(s);
-
 	close(fd);
-
-	return (0);
 }

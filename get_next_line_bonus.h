@@ -6,7 +6,7 @@
 /*   By: hialpagu <hialpagu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 21:41:09 by hialpagu          #+#    #+#             */
-/*   Updated: 2024/12/28 21:45:16 by hialpagu         ###   ########.fr       */
+/*   Updated: 2024/12/31 10:38:42 by hialpagu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,10 @@
 #  define BUFFER_SIZE 42
 # endif
 
-# ifndef MAX_FDS
-#  define MAX_FDS 4242
-# endif
-
 # include <stdlib.h>
 # include <unistd.h>
 # include <fcntl.h>
 
-char	*ft_left(char *buffer, char c);
-char	*ft_line(char *buffer, char c);
-char	*ft_read(int fd, char *res);
 char	*get_next_line(int fd);
 int		ft_strlen(char *str);
 char	*ft_strchr(const char *s, int c);

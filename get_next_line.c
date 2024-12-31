@@ -6,7 +6,7 @@
 /*   By: hialpagu <hialpagu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 20:25:18 by hialpagu          #+#    #+#             */
-/*   Updated: 2024/12/28 22:46:16 by hialpagu         ###   ########.fr       */
+/*   Updated: 2024/12/31 10:37:41 by hialpagu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_left(char *buffer, char c)
 		free(buffer);
 		return (NULL);
 	}
-	line = (char *)malloc((ft_strlen(buffer) - i) + 1);
+	line = malloc((ft_strlen(buffer) - i) + 1);
 	if (!line)
 		return (NULL);
 	i++;
@@ -48,7 +48,7 @@ char	*ft_line(char *buffer, char c)
 		return (NULL);
 	while (buffer[i] && buffer[i] != c)
 		i++;
-	line = (char *)malloc(sizeof(char) * i + 2);
+	line = malloc(sizeof(char) * i + 2);
 	if (!line)
 		return (NULL);
 	i = 0;
@@ -71,7 +71,7 @@ char	*ft_read(int fd, char *res)
 	char	*buffer;
 	int		i;
 
-	buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE + 1);
+	buffer = malloc(sizeof(char) * BUFFER_SIZE + 1);
 	if (!buffer)
 		return (NULL);
 	i = 1;
